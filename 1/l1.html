@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ng-app>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    </head>
+    
+    <body>
+        <h3>表达式</h3>
+        <p>支持普通的JS表达式，表达式通过{{}}使用。</p>
+        <div>
+          <p>我的第一个表达式： {{ 5 + 5 }}</p>
+        </div>
+        <br />
+        <h3>2 指令</h3>
+        <p>通过特定的标签指定，完成数据的绑定以及定义，抓取</p>
+        <div ng-init="firstName='John'">
+          <p>在输入框中尝试输入：</p>
+          <p>姓名：<input type="text" ng-model="firstName"></p>
+          <p>你输入的为： {{ firstName }}</p>
+        </div>
+        <ul>
+            <li>ng-app 定义AngularJS的应用程序</li>
+            <li>ng-init 初始化应用程序变量</li>
+            <li>ng-model 获取程序变量</li>
+            <li>ng-bind 绑定数据变量</li>
+        </ul>
+        <br />
+        <h3>3 控制器</h3>
+		<p>通过控制器，控制应用程序。通过构造函数，完成方法以及变量的创建。</p>
+       	<p>其中personController相当于构造方法函数，参数$scope代替指定的元素标签。</p>
+        
+        <div ng-controller="personController">
+        名： <input type="text" ng-model="person.firstName"><br>
+        姓： <input type="text" ng-model="person.lastName"><br>
+        <br>
+        姓名： {{person.firstName + " " + person.lastName}}
+        
+        </div>
+        <script>
+        function personController($scope) {
+            $scope.person = {
+                firstName: "John",
+                lastName: "Doe"
+            };
+        }
+        </script>
+        
+        <h3>4 过滤器</h3>
+        <p>通过过滤器，完成特定的排序或者过滤，大小写转换等等。</p>
+        <p>currency数字转化成货币格式</p>
+        <!--载入AngularJS脚本-->
+        <script src="../lib/angular-1.0.1.min.js"></script>
+    </body>
+</html>

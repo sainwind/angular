@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app>
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>基本配置+表达式</title></head>
+    <body>
+    	<ul>
+        	<li>表达式用法1：数学运算【{{ 3+3}}】【{{ 4-3}}】【{{ 3*3}}】【{{ 6/3 }}】</li>
+        	<li>表达式用法2：未定义变量{{undefindvar}}</li>
+        	<li>管道用法：{{3*10 | currency}}</li>
+        	<li>变量引用：{{user.name}}</li>
+        	<li></li>
+        	<li></li>
+        	<li>脚步执行表达式： $parse(expression);</li>
+        </ul>
+    	
+        
+        <p>$scope控制作用域</p>
+        <p>未定义的表达式返回空字符串值，也不报错</p>
+        <p>表达式中使用 | 管道命令符，添加过滤器，与UNIX的命令行类似</p>
+        <p>$符号以区别angular的方法与用户自定义的方法</p>
+        
+        <div ng-controller="ctl">
+            name:<input ng-model="name" type="text">
+            <button ng-click="reset()">reset</button>
+            <br>
+            {{name}}
+            <br>
+            hello ! {{test}}
+            <br>
+            filter : {{name | uppercase}}
+        </div>
+        <script type="text/javascript">
+		function ctl($scope){
+			var str = "init";
+			$scope.name = str;
+
+			$scope.reset = function(){
+				$scope.name = str;
+			}
+		}
+        </script>
+        
+        <!--载入AngularJS脚本-->
+        <script src="../lib/angular-1.0.1.min.js"></script>
+    </body>
+</html>
