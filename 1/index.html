@@ -6,15 +6,54 @@
   </head>
   
   <body>
-  	<ul>
+    
+    <ul>
     	<li>demo 1</li>
-    	<li><a href="1.html">sub menu1</a></li>
-    	<li><a href="#">sub menu1</a></li>
-    	<li><a href="#">sub menu1</a></li>
-    	<li><a href="#">sub menu1</a></li>
+    	<li><a href="1.html">简单例子1</a></li>
+    	<li><a href="2.html">简单例子2</a></li>
+   	  <li><a href="l1.html">系统课程 1</a></li>
+   	  <li><a href="#">sub menu1</a></li>
     	<li><a href="#">sub menu1</a></li>
     	<li><a href="#">sub menu1</a></li>
     	<li><a href="#">sub menu1</a></li>
     </ul>
+    <ul>
+    	<li><a href="#">放到</a></li>
+    	<li><a href="#">放到</a></li>
+    	<li><a href="#">放到</a></li>
+    	<li><a href="#">放到</a></li>
+    	<li><a href="#">放到</a></li>
+    </ul>
+
+  <p>数据绑定、基本模板标识符、表单验证、路由、深度链接、组件重用、依赖注入</p>
+  <p>测试方面包括：单元测试、端对端测试、模拟和自动化测</p>试框架。
+  <p>具有目录布局和测试脚本的种子应用作为起点。</p>
+  <h3>AngularJS应用的解析</h3>
+<p>本节描述AngularJS应用程序的三个组成部分，并解释它们如何映射到模型-视图-控制器设计模式</p>
+
+<h3>模板（Templates）</h3>
+<p>模板是您用HTML和CSS编写的文件，展现应用的视图。 您可给HTML添加新的元素、属性标记，作为AngularJS编译器的指令。 AngularJS编译器是完全可扩展的，这意味着通过AngularJS您可以在HTML中构建您自己的HTML标记！</p>
+
+<p>应用程序逻辑（Logic）和行为（Behavior）</p>
+<p>应用程序逻辑和行为是您用JavaScript定义的控制器。AngularJS与标准AJAX应用程序不同，您不需要另外编写侦听器或DOM控制器，因为它们已经内置到AngularJS中了。这些功能使您的应用程序逻辑很容易编写、测试、维护</p>和理解。
+
+<p>模型数据（Data）</p>
+<p>模型是从AngularJS作用域对象的属性引申的。模型中的数据可能是Javascript对象、数组或基本类型，这都不重要，重要的是，他们都属于AngularJS作用域对象。</p>
+<p>AngularJS通过作用域来保持数据模型与视图界面UI的双向同步。一旦模型状态发生改变，AngularJS会立即刷新反映在视图界面</p>中，反之亦然。
+
+<p>此外，AngularJS还提供了一些非常有用的服务特性：
+底层服务包括依赖注入，XHR、缓存、URL路由和浏览器抽象服务。
+您还可以扩展和添加自己特定的应用服务。
+这些服务可以让您非常方便的编写WEB应用。</p>
+
+<p>ng-app指令标记了AngularJS脚本的作用域，在&lt;html>中添加ng-app属性即说明整个&lt;html>都是AngularJS脚本作用域。开发者也可以在局部使用ng-app指令，如&lt;div ng-app>，则AngularJS脚本仅在该&lt;div>中运行。</p>
+<p>AngularJS应用引导过程有3个重要点：
+    <ol>
+        <li>注入器(injector)将用于创建此应用程序的依赖注入(dependency injection)</li>
+        <li>注入器将会创建根作用域作为我们应用模型的范围</li>
+        <li>AngularJS将会链接根作用域中的DOM，从用ngApp标记的HTML标签开始，逐步处理DOM中指令和绑定</li>
+    </ol>
+</p>
+<p>一旦AngularJS应用引导完毕，它将继续侦听浏览器的HTML触发事件，如鼠标点击事件、按键事件、HTTP传入响应等改变DOM模型的事件。这类事件一旦发生，AngularJS将会自动检测变化，并作出相应的处理及更新</p>
   </body>
 </html>

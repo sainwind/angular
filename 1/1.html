@@ -1,9 +1,18 @@
 <!doctype html>
+<!-- 标记"ng-app"告诉AngularJS处理整个HTML页并引导应用 -->
 <html ng-app>
     <head>
     </head>
     <body>
+    	<!--{{}}的内容是绑定的表达式；双大括号{{}}语法进行数据绑定-->
         Hello {{'World'}}!
-        <script src="lib/angular-1.0.1.min.js"></script>
+        <br/>
+       <!-- ng-model="yourname" 文本输入指令绑定到一个叫yourname的模型变量。-->
+        Your name: <input type="text" ng-model="yourname" placeholder="World">
+        <hr>
+        <!--默认值是World,如果输入内容，则值就未输入内容-->
+        Hello {{yourname || 'World'}}!
+        <!--载入AngularJS脚本-->
+        <script src="../lib/angular-1.0.1.min.js"></script>
     </body>
 </html>
